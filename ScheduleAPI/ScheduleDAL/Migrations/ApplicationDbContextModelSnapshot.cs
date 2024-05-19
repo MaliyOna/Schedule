@@ -37,7 +37,7 @@ namespace ScheduleDAL.Migrations
 
                     b.HasIndex("ScheduleEntityId");
 
-                    b.ToTable("Meals");
+                    b.ToTable("Meals", (string)null);
                 });
 
             modelBuilder.Entity("ScheduleDAL.Entities.ScheduleEntity", b =>
@@ -51,7 +51,7 @@ namespace ScheduleDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Schedules");
+                    b.ToTable("Schedules", (string)null);
                 });
 
             modelBuilder.Entity("ScheduleDAL.Entities.ToDoEntity", b =>
@@ -74,7 +74,7 @@ namespace ScheduleDAL.Migrations
 
                     b.HasIndex("ScheduleEntityId");
 
-                    b.ToTable("ToDos");
+                    b.ToTable("ToDos", (string)null);
                 });
 
             modelBuilder.Entity("ScheduleDAL.Entities.MealEntity", b =>
