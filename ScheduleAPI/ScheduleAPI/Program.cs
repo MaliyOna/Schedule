@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using ScheduleAPI.DI;
 using ScheduleAPI.Middlewares;
 
@@ -18,6 +19,9 @@ public class Program
 
         var connection = builder.Configuration.GetConnectionString("DefaultConnection");
         builder.Services.AddApiServices(connection);
+
+        builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(/*cookie=> you can add some options here*/);
 
         var app = builder.Build();
 

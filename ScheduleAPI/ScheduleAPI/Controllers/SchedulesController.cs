@@ -1,29 +1,19 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ScheduleAPI.DTO;
-using ScheduleBLL.Abstraction;
 using ScheduleBLL.Models;
+using ScheduleBLL.Services.Abstractions;
 
 namespace ScheduleAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class SchedulesController : ControllerBase
+[Authorize]
+public class SchedulesController : GenericController<ScheduleModel, ScheduleDTO>
 {
-    private readonly IMapper mapper;
-    private readonly IScheduleService scheduleService;
-
-    public SchedulesController(IMapper mapper, IScheduleService scheduleService)
+    public SchedulesController(IMapper mapper, IGenericService<ScheduleModel> service)
+        : base(mapper, service)
     {
-        this.mapper = mapper;
-        this.scheduleService = scheduleService;
-    }
-
-    [HttpPost]
-    public async Task CreateSchedule(ScheduleDTO scheduleDTO, CancellationToken cancellationToken)
-    {
-        var model = mapper.Map<ScheduleModel>(scheduleDTO);
-
-        await scheduleService.CreateSchedule(model, cancellationToken);
     }
 }
