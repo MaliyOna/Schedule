@@ -7,7 +7,6 @@ namespace ScheduleAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize]
 public class GenericController<TModel, TDto> : ControllerBase, IGenericController<TDto>
 {
     protected readonly IMapper _mapper;

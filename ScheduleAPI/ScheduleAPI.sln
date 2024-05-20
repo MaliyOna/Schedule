@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleAPI", "ScheduleAPI\ScheduleAPI.csproj", "{6BC684AE-7344-48D7-B6E1-F70B0C8AED49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleAPI", "ScheduleAPI\ScheduleAPI.csproj", "{6BC684AE-7344-48D7-B6E1-F70B0C8AED49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleBLL", "ScheduleBLL\ScheduleBLL.csproj", "{F47E45EE-B4A9-463C-B5CD-DB2BE457710E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleBLL", "ScheduleBLL\ScheduleBLL.csproj", "{F47E45EE-B4A9-463C-B5CD-DB2BE457710E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleDAL", "ScheduleDAL\ScheduleDAL.csproj", "{10FD005D-9260-4598-BE8D-CF32276CB0B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleDAL", "ScheduleDAL\ScheduleDAL.csproj", "{10FD005D-9260-4598-BE8D-CF32276CB0B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleDomain", "ScheduleDomain\ScheduleDomain.csproj", "{917D3218-DA40-43EA-91D3-AB918E99B8F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleDomain", "ScheduleDomain\ScheduleDomain.csproj", "{917D3218-DA40-43EA-91D3-AB918E99B8F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B8F53DFB-F431-4D30-AB5B-93AE407C9EDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schedule.UnitTests", "Schedule.UnitTests\Schedule.UnitTests.csproj", "{DADDA6DB-24FB-4A35-B967-DFF904A4037A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schedule.IntegrationTests", "Schedule.IntegrationTests\Schedule.IntegrationTests.csproj", "{32E3A6A9-AA1A-4A18-8142-0898C62B0C9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,21 @@ Global
 		{917D3218-DA40-43EA-91D3-AB918E99B8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{917D3218-DA40-43EA-91D3-AB918E99B8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{917D3218-DA40-43EA-91D3-AB918E99B8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DADDA6DB-24FB-4A35-B967-DFF904A4037A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DADDA6DB-24FB-4A35-B967-DFF904A4037A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DADDA6DB-24FB-4A35-B967-DFF904A4037A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DADDA6DB-24FB-4A35-B967-DFF904A4037A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E3A6A9-AA1A-4A18-8142-0898C62B0C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E3A6A9-AA1A-4A18-8142-0898C62B0C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E3A6A9-AA1A-4A18-8142-0898C62B0C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E3A6A9-AA1A-4A18-8142-0898C62B0C9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DADDA6DB-24FB-4A35-B967-DFF904A4037A} = {B8F53DFB-F431-4D30-AB5B-93AE407C9EDC}
+		{32E3A6A9-AA1A-4A18-8142-0898C62B0C9E} = {B8F53DFB-F431-4D30-AB5B-93AE407C9EDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE2A7EA3-F22E-4F9C-85CE-19BC9ECE8113}
